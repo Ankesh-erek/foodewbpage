@@ -1,0 +1,45 @@
+package arrays;
+import java.util.Scanner;
+public class MatrixMultiplication {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the Dimension ( n * n ) :-");
+
+		int n = sc.nextInt();
+		
+		
+		int a[][] = new int [n][n];
+		int b[][] = new int [n][n];
+		
+		System.out.println("Enter array 1 :-");
+		for(int i = 0 ; i<n; i++) {
+			for(int j = 0 ; j<n ; j++) {
+				a[i][j]= sc.nextInt();
+			}
+		}
+		System.out.println("Enter array 2 :-");
+	     for(int i = 0 ; i < n ; i++) {
+	    	 for(int j = 0 ; j<n ; j++) {
+	    		 b[j][i]= sc.nextInt();
+	    	 }
+	     }
+	     
+         
+        	 int c [][] = new int [n][n];
+                    for(int i = 0 ; i<n ;i++) {
+                    	for(int j = 0 ; j<n ; j++) {
+                    		c[i][j]= a[i][j]*b[i][j];
+                    	}
+                    }
+                    for(int i = 0 ; i<n ; i++) {
+                    	for( int j = 0 ; j<n; j++) {
+                    		System.out.print(c[i][j] + " ");
+                    	}
+                    	System.out.println();
+                    }		
+		
+	}
+
+}
